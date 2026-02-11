@@ -16,7 +16,8 @@
             background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
             color: #1a1a1a;
             line-height: 1.6;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
         }
@@ -73,12 +74,12 @@
 
         /* Hero Section */
         .hero {
-            padding: 120px 0;
+            flex: 1;
             text-align: center;
-            min-height: calc(100vh - 200px);
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
 
         .hero-content {
@@ -90,25 +91,15 @@
         }
 
         .avi-character {
-            width: 240px;
-            height: 240px;
-            margin-bottom: 40px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
         }
 
         h1 {
-            font-size: 64px;
+            font-size: 48px;
             font-weight: 800;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             background: linear-gradient(135deg, #33A666 0%, #FF9933 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -117,9 +108,9 @@
         }
 
         .subtitle {
-            font-size: 22px;
+            font-size: 18px;
             color: #666;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
             max-width: 500px;
             margin-left: auto;
             margin-right: auto;
@@ -133,9 +124,9 @@
         }
 
         .btn {
-            padding: 16px 32px;
+            padding: 14px 28px;
             border-radius: 16px;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
@@ -168,52 +159,6 @@
         }
 
 
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #999;
-            padding: 60px 0 30px;
-            margin-top: auto;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-section h4 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links a {
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #33A666;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            color: #666;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
@@ -229,13 +174,23 @@
                 font-size: 14px;
             }
 
-            .hero {
-                padding: 40px 0;
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
             }
 
             .avi-character {
                 width: 150px;
                 height: 150px;
+                margin-bottom: 20px;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 14px;
             }
         }
     </style>
@@ -257,8 +212,8 @@
             <div class="container">
                 <div class="hero-content">
                     <img src="/avi.png" alt="Avi the Avocado Chef" class="avi-character">
-                    <h1>Your Smart Cooking Companion</h1>
-                    <p class="subtitle">Scan ingredients, generate recipes, and cook with confidence. Reciplease makes meal planning effortless.</p>
+                    <h1>Reciplease</h1>
+                    <p class="subtitle">Stop wasting food. Start saving money.</p>
                     <div class="cta-buttons">
                         <a href="https://apps.apple.com/app/reciplease" class="btn btn-primary">Download on App Store</a>
                         <a href="/support" class="btn btn-secondary">Get Support</a>
@@ -268,33 +223,5 @@
         </section>
 
     </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Reciplease</h4>
-                    <p>Your smart cooking companion for effortless meal planning and recipe discovery.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="/support">Support</a></li>
-                        <li><a href="/terms">Terms of Service</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://apps.apple.com/app/reciplease">App Store</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Reciplease. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
